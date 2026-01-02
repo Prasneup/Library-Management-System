@@ -8,7 +8,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
 
-        System.out.println("📚 Welcome to the Library Management System");
+        System.out.println(" Welcome to the Library Management System");
 
         while (running) {
             System.out.println("\n--- Menu ---");
@@ -29,16 +29,16 @@ public class Main {
                     System.out.print("Enter user ID: ");
                     String id = scanner.nextLine();
                     library.registerUser(new User(name, id));
-                    System.out.println("✅ User registered.");
+                    System.out.println(" User registered.");
                     break;
 
                 case "2":
-                    System.out.println("📚 Book List:");
+                    System.out.println(" Book List:");
                     library.listAllBooks();
                     break;
 
                 case "3":
-                    System.out.println("👥 User List:");
+                    System.out.println(" User List:");
                     library.listAllUsers();
                     break;
 
@@ -48,9 +48,9 @@ public class Main {
                     System.out.print("Enter book ISBN: ");
                     String isbn = scanner.nextLine();
                     if (library.borrowBook(userId, isbn)) {
-                        System.out.println("📖 Book borrowed successfully.");
+                        System.out.println(" Book borrowed successfully.");
                     } else {
-                        System.out.println("⚠️ Could not borrow book.");
+                        System.out.println(" Could not borrow book.");
                     }
                     break;
 
@@ -60,19 +60,19 @@ public class Main {
                     System.out.print("Enter book ISBN: ");
                     String returnIsbn = scanner.nextLine();
                     if (library.returnBook(returnUserId, returnIsbn)) {
-                        System.out.println("✅ Book returned successfully.");
+                        System.out.println(" Book returned successfully.");
                     } else {
-                        System.out.println("⚠️ Could not return book.");
+                        System.out.println(" Could not return book.");
                     }
                     break;
 
                 case "6":
                     running = false;
-                    System.out.println("👋 Exiting... Goodbye!");
+                    System.out.println(" Exiting... Goodbye!");
                     break;
 
                 default:
-                    System.out.println("❌ Invalid option. Try again.");
+                    System.out.println(" Invalid option. Try again.");
             }
         }
 
